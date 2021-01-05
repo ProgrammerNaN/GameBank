@@ -9,10 +9,10 @@ public class RequestHandler extends Thread {
 
     public RequestHandler() {
         this.handlerName = "Обработчик заявок №" + this.getId();
-        this.frontSystem = FrontSystemSimple.getInstance();
+        this.frontSystem = FrontSystemConcurrent.getInstance();
         this.backSystem = BackSystemSimple.getInstance();
         this.setDaemon(true);
-        start();
+        //start();
     }
 
     @Override

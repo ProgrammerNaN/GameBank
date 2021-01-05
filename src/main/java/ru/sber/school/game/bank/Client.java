@@ -9,8 +9,8 @@ public class Client extends Thread {
     public Client(int amount, RequestType requestType) {
         this.name = "Клиент №" + this.getId();
         this.request = new Request(this.name, amount, requestType);
-        frontSystem = FrontSystemSimple.getInstance();
-        start();
+        frontSystem = FrontSystemConcurrent.getInstance();
+        //start();
     }
 
     @Override
